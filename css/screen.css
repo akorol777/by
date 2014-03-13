@@ -1,0 +1,58 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
+
+body, html { height: 100%; }
+
+img, fieldset, a img { border: none; }
+
+input[type="submit"], button { cursor: pointer; }
+input[type="submit"]::-moz-focus-inner, button::-moz-focus-inner { padding: 0; border: 0; }
+
+textarea { overflow: auto; }
+
+input, button { margin: 0; padding: 0; border: 0; }
+
+input, textarea, select, button, h1, h2, h3, h4, h5, h6, a, span, a:focus { outline: none; }
+
+ul, ol { list-style-type: none; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
+table { border-spacing: 0; border-collapse: collapse; width: 100%; }
+
+.wrap { width: 1235px; margin: 22px auto; font: 13px sans-serif; }
+
+/*-----header--------------------------------------- */
+.header { *zoom: 1; }
+.header:after { content: " "; display: table; clear: both; }
+
+.header__roll { display: block; *zoom: 1; margin-bottom: 11px; }
+.header__roll:after { content: " "; display: table; clear: both; }
+.header__roll .header__roll-vers { display: inline-block; font-size: 11px; line-height: 11px; margin-left: 100px; }
+.header__roll div, .header__roll ul { vertical-align: top; }
+
+.links { display: inline-block; }
+.links li { float: right; }
+.links a { text-decoration: none; color: #a7a7a7; }
+.links a:hover { color: #e32638; }
+.links .is-active { color: black; }
+.links .is-active:hover { color: black; cursor: default; }
+
+.links-lang { float: right; font-size: 11px; line-height: 11px; }
+.links-lang li { margin-left: 8px; }
+.links-lang .is-active { text-decoration: underline; }
+
+.links-news { font-size: 13px; line-height: 18px; font-weight: bold; margin: 7px 0 0 90px; }
+.links-news li { width: 200px; margin-right: 28px; }
+
+.links-info { float: right; margin-top: 9px; }
+.links-info li { margin-left: 30px; }
+.links-info a { color: black; text-decoration: underline; font-weight: bold; font-size: 14px; line-height: 14px; }
+
+.logo { background: url(../img/logo.png); height: 49px; width: 186px; display: inline-block; }
+
+/*-----article-------------------------------------- */
+.article { background: lime; }
+
+/*-----footer--------------------------------------- */
+.footer { background: blue; }
+
+.time { display: inline-block; color: #b6b6b6; font-size: 10px; line-height: 10px; }
