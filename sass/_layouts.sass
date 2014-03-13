@@ -28,7 +28,65 @@ a
 	display: inline-block			 
 /*-----article--------------------------------------*/	
 .article
-	border-bottom: 3px solid #979797 
+	letter-spacing: 0.07em 	
+	border-bottom: 3px solid #979797
+	+clr
+	padding-top: 50px
+	a
+		text-decoration: none
+		color: #000 
+		&:hover
+			color: $red 
+	section
+		float: left 
+.article__news
+	width: 970px
+.block
+	+clr
+	border-bottom: 3px solid #979797
+	padding-bottom: 22px 
+.block__main
+	width: 457px
+	margin-right: 47px 
+	.block__main-img
+		background: url(../img/rockets.png) no-repeat 
+		height: 279px
+		width: 448px	
+		margin-bottom: 21px 
+	.block__main-link
+		font-size: 22px
+		line-height: 25px
+		font-weight: bold	
+		display: inline-block
+		margin: 0 0 12px 3px 
+		span
+			font-size: 17px
+		span + span
+			font-size: 14px	
+	.block__main-cont
+		margin-left: 2px
+		font-size: 12px
+		line-height: 18px
+.block__cont
+	+clr
+	margin-top: 9px
+	width: 465px
+	.links__article
+		margin-bottom: 31px	
+.block__cont-roll
+	display: inline-block
+	margin-left: 7px
+	margin-bottom: 29px
+	font-size: 15px
+	line-height: 19px
+	span
+		font-weight: bold
+		font-size: 12px
+	span + span
+		color: $red 
+		font-size: 11px
+.article__acide
+
 /*-----footer---------------------------------------*/	
 .footer__ico
 	+box
@@ -132,8 +190,22 @@ a
 			clear: both	
 			&:after
 				content: ""
-				display: none 			
-	
+				display: none
+.links__article
+	font-weight: bold
+	font-size: 12px
+	line-height: 12px	
+	li
+		float: left
+		margin-right: 16px
+	a	
+		color: #000
+		padding: 4px 5px 2px 6px 
+		letter-spacing: 0.16em 		
+	.is-active
+		border: 2px solid $red 
+	.last
+		margin-right: 0	
 /*-----ico------------------------------------------*/
 .ico
 	display: inline-block
