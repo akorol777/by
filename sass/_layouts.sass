@@ -1,3 +1,6 @@
+$red: #e1001b
+a
+	+transition (0.3s)
 .wrap
 	width: 1235px
 	margin: 22px auto 
@@ -5,9 +8,8 @@
 /*-----header---------------------------------------*/
 .header
 	+clr
-	//background: #f00
-	.time
-		//float: left
+	border-bottom: 2px solid #979797
+	height: 106px 
 .header__roll
 	display: block
 	+clr	
@@ -19,7 +21,50 @@
 		margin-left: 100px
 	div, ul
 		vertical-align: top	
-		
+.logo	
+	background: url(../img/logo.png) 
+	height: 49px
+	width: 186px
+	display: inline-block			 
+/*-----article--------------------------------------*/	
+.article
+	border-bottom: 3px solid #979797 
+/*-----footer---------------------------------------*/	
+.footer__ico
+	+box
+	height: 139px
+	padding: 43px 0 0 21px 
+	.ico
+		vertical-align: middle
+		margin-right: 130px 
+	.ico-6
+		margin-right: 0	
+.footer__links
+	border-bottom: 1px solid #979797
+	border-top: 1px solid #979797
+	padding: 20px 0 6px 4px
+	font-size: 12px
+	line-height: 12px
+	+clr 
+.footer__bottom	
+	+clr
+	padding: 28px 0px 0px 3px
+.footer__bottom-copyright
+	float: right
+	font-size: 11px
+	font-size: 11px
+	a
+		color: $red
+		&:hover
+			text-decoration: none
+			color: #000 		
+/*------time--------------------------------*/
+.time
+	display: inline-block
+	color: #b6b6b6 
+	font-size: 10px
+	line-height: 10px 
+/*-----links---------------------------------*/		
 .links
 	display: inline-block
 	li
@@ -28,7 +73,7 @@
 		text-decoration: none
 		color: #a7a7a7
 		&:hover
-			color: #E32638 
+			color: $red 
 	.is-active
 		color: #000 
 		&:hover
@@ -48,6 +93,7 @@
 	font-weight: bold 
 	margin: 7px 0 0 90px 
 	li
+		float: left
 		width: 200px
 		margin-right: 28px
 .links-info	
@@ -61,25 +107,47 @@
 		font-weight: bold
 		font-size: 14px
 		line-height: 14px
-
-
- 
-.logo	
-	background: url(../img/logo.png) 
-	height: 49px
-	width: 186px
-	display: inline-block			 
-	 
-/*-----article--------------------------------------*/	
-.article
-	background: #0f0
-/*-----footer---------------------------------------*/	
-.footer	 
-	background: #00f
-//////////////////////////////////////////////////////
-.time
-	display: inline-block
-	color: #b6b6b6 
-	font-size: 10px
-	line-height: 10px 
+.links-footer
+	margin-bottom: 13px 
+	li
+		margin-right: 22px
+		float: left
+	a	
+		color: #000 
+		font-weight: bold	
+		position: relative
+		letter-spacing: 0.1em 	
+		&:after
+			position: absolute
+			content: ""
+			height: 4px
+			width: 4px
+			+border-radius (50%)
+			background: #000
+			top: 5px
+			right: -10px 
+	.clear
+		margin-right: 0 
+		a
+			clear: both	
+			&:after
+				content: ""
+				display: none 			
 	
+/*-----ico------------------------------------------*/
+.ico
+	display: inline-block
+.ico-1
+	+s(ico-1)	
+.ico-2
+	+s(ico-2)	
+.ico-3
+	+s(ico-3)	
+.ico-4
+	+s(ico-4)	
+.ico-5
+	+s(ico-5)	
+.ico-6
+	+s(ico-6)
+.ico-counter
+	+s(ico-counter)		
