@@ -1,4 +1,5 @@
 $red: #e1001b
+$gray: #979797
 a
 	+transition (0.3s)
 .wrap
@@ -8,7 +9,7 @@ a
 /*-----header---------------------------------------*/
 .header
 	+clr
-	border-bottom: 2px solid #979797
+	border-bottom: 2px solid $gray
 	height: 106px 
 .header__roll
 	display: block
@@ -29,7 +30,7 @@ a
 /*-----article--------------------------------------*/	
 .article
 	letter-spacing: 0.07em 	
-	border-bottom: 3px solid #979797
+	border-bottom: 3px solid $gray
 	+clr
 	padding-top: 50px
 	a
@@ -43,7 +44,7 @@ a
 	width: 970px
 .block
 	+clr
-	border-bottom: 3px solid #979797
+	border-bottom: 3px solid $gray
 	padding-bottom: 22px 
 .block__main
 	width: 457px
@@ -53,6 +54,9 @@ a
 		height: 279px
 		width: 448px	
 		margin-bottom: 21px 
+	.img-man
+		background: url(../img/man.png) no-repeat 			
+		margin-bottom: 17px
 	.block__main-link
 		font-size: 22px
 		line-height: 25px
@@ -69,10 +73,9 @@ a
 		line-height: 18px
 .block__cont
 	+clr
-	margin-top: 9px
 	width: 465px
 	.links__article
-		margin-bottom: 31px	
+		margin: 9px 0 31px 
 .block__cont-roll
 	display: inline-block
 	margin-left: 7px
@@ -85,8 +88,145 @@ a
 	span + span
 		color: $red 
 		font-size: 11px
+.block__roll
+	+clr
+	padding: 0px 0px 0px 2px 
+.block__roll-headline	
+	font-weight: bold
+	font-size: 17px
+	line-height: 17px
+	margin: 46px 0 42px 
+	div
+		display: inline-block
+		float: left
+		color: $red 
+	a	
+		float: right
+		text-decoration: underline	
+		&:hover
+			text-decoration: none
+.block__roll-news
+	margin-bottom: 52px
+	+clr
+	a
+		display: inline-block
+		font-size: 16px
+		line-height: 19px
+		margin-bottom: 11px
+		font-weight: bold
+		cursor: pointer
+		span
+			font-weight: normal
+			font-size: 15px
+		span + span
+			color: $red 
+			font-weight: bold
+			font-size: 11px
+	div
+		letter-spacing: 0.04em
+	.video + a
+		margin-top: 14px
+.block-last
+	border-bottom: none
+	padding-bottom: 32px 	
+	.block__roll-headline
+		margin: 56px 0 42px	
+.block-third
+	padding-bottom: 0px
+	.block__roll-headline
+		margin: 48px 0 46px
+	.block__main
+		.block__roll-news
+			margin-bottom: 49px		
+	.block__cont
+		padding-top: 6px
+		padding-left: 5px
+		+box 
+		.block__roll-news
+			margin-bottom: 63px
+.block__btn
+	clear: both			
+.video
+	float: left
+	height: 82px
+	width: 129px
+	margin-right: 17px
+.video1
+	background: url(../img/video1.png) no-repeat 
+.video2
+	background: url(../img/video2.png) no-repeat 	
 .article__acide
-
+	width: 220px
+	padding: 6px 0px 0px 45px 
+	.block__roll-headline
+		margin: 0px 0px 18px 0px
+.article__acide-news
+	padding-left: 3px
+	margin-bottom: 48px
+	.video
+		width: 216px
+		height: 133px
+		display: inline-block
+		margin: 0 0 7px 0
+		float: none
+	.video3	
+		background: url(../img/video3.png) 
+	.video4	
+		background: url(../img/video4.png) 	
+	.block__roll-news
+		letter-spacing: 0 
+		margin: 0px 0px 19px 0px 
+.block__roll-info
+	margin-bottom: 56px
+	.info
+		border: 1px solid $gray
+		padding: 19px 0px 21px 23px
+		margin-bottom: 20px
+		.info__headline
+			font-size: 12px
+			line-height: 12px 
+			letter-spacing: 0.17em 
+			margin-bottom: 25px						
+			a
+				text-decoration: underline	
+		.info__content
+			padding-left: 2px
+			+clr
+			.roll
+				margin-bottom: 11px	
+		.info__content-var
+			float: left
+			.roll
+				width: 74px
+		.info__content-value
+			.roll__max
+				font-weight: bold
+			.roll__min
+				color: $gray
+				font-weight: bold 
+	.info-sub
+		padding-top: 20px
+		padding-bottom: 17px
+		.info__content-var
+			width: 90px
+		.info__headline
+			margin-top: 4px 0px 23px 3px
+		.roll
+			display: block
+			font-size: 12px
+			line-height: 17px	
+.article__acide-short
+	margin: 22px 0 42px
+	.roll
+		margin-bottom: 17px
+		.block__cont-roll
+			margin: 0
+			line-height: 20px
+		.roll__author
+			color: $gray
+			font-size: 11px
+			line-height: 23px 
+			letter-spacing: 0
 /*-----footer---------------------------------------*/	
 .footer__ico
 	+box
@@ -98,8 +238,8 @@ a
 	.ico-6
 		margin-right: 0	
 .footer__links
-	border-bottom: 1px solid #979797
-	border-top: 1px solid #979797
+	border-bottom: 1px solid $gray
+	border-top: 1px solid $gray
 	padding: 20px 0 6px 4px
 	font-size: 12px
 	line-height: 12px
@@ -129,7 +269,7 @@ a
 		float: right
 	a
 		text-decoration: none
-		color: #a7a7a7
+		color: #000
 		&:hover
 			color: $red 
 	.is-active
@@ -141,6 +281,8 @@ a
 	float: right	
 	font-size: 11px
 	line-height: 11px
+	a
+		color: $gray 
 	li
 		margin-left: 8px
 	.is-active
@@ -206,6 +348,22 @@ a
 		border: 2px solid $red 
 	.last
 		margin-right: 0	
+.links-prew	
+	margin: 7px 0 28px 
+	font-weight: bold
+	font-size: 12px
+	line-height: 12px
+	border: 2px transparent solid	
+	padding: 4px 9px 3px 
+	text-decoration: underline
+	span
+		font-size: 24px
+		display: inline-block
+		overflow: hidden
+		width: 13px
+		margin-right: 9px
+	&:hover	
+		border: 2px $red solid
 /*-----ico------------------------------------------*/
 .ico
 	display: inline-block
