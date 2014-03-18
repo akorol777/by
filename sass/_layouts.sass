@@ -1,7 +1,7 @@
 $red: #e1001b
 $gray: #979797
 a
-	+transition (0.3s)
+	+transition (0.2s)
 .wrap
 	width: 1235px
 	margin: 22px auto 
@@ -26,7 +26,8 @@ a
 	background: url(../img/logo.png) 
 	height: 49px
 	width: 186px
-	display: inline-block			 
+	display: inline-block	
+	+hide-text		 
 /*-----article--------------------------------------*/	
 .article
 	letter-spacing: 0.07em 	
@@ -50,10 +51,13 @@ a
 	width: 457px
 	margin-right: 47px 
 	.block__main-img
-		background: url(../img/rockets.png) no-repeat 
 		height: 279px
 		width: 448px	
 		margin-bottom: 21px 
+		overflow: hidden
+		a
+		img
+			width: 100%
 	.img-man
 		background: url(../img/man.png) no-repeat 			
 		margin-bottom: 17px
@@ -96,10 +100,12 @@ a
 	font-size: 17px
 	line-height: 17px
 	margin: 46px 0 42px 
-	div
+	.title
 		display: inline-block
 		float: left
 		color: $red 
+		font-size: 17px
+		line-height: 17px
 	a	
 		float: right
 		text-decoration: underline	
@@ -151,10 +157,9 @@ a
 	height: 82px
 	width: 129px
 	margin-right: 17px
-.video1
-	background: url(../img/video1.png) no-repeat 
-.video2
-	background: url(../img/video2.png) no-repeat 	
+	overflow: hidden
+	img
+		width: 100%
 .article__acide
 	width: 220px
 	padding: 6px 0px 0px 45px 
@@ -169,10 +174,7 @@ a
 		display: inline-block
 		margin: 0 0 7px 0
 		float: none
-	.video3	
-		background: url(../img/video3.png) 
-	.video4	
-		background: url(../img/video4.png) 	
+		overflow: hidden
 	.block__roll-news
 		letter-spacing: 0 
 		margin: 0px 0px 19px 0px 
@@ -307,6 +309,8 @@ a
 		font-weight: bold
 		font-size: 14px
 		line-height: 14px
+		&:hover
+			text-decoration: none
 .links-footer
 	margin-bottom: 13px 
 	li
@@ -339,11 +343,12 @@ a
 	line-height: 12px	
 	li
 		float: left
-		margin-right: 16px
+		margin-right: 14px
 	a	
 		color: #000
 		padding: 4px 5px 2px 6px 
-		letter-spacing: 0.16em 		
+		letter-spacing: 0.16em 
+		border: 2px solid transparent		
 	.is-active
 		border: 2px solid $red 
 	.last
@@ -353,7 +358,7 @@ a
 	font-weight: bold
 	font-size: 12px
 	line-height: 12px
-	border: 2px transparent solid	
+	border: 2px #000 solid	
 	padding: 4px 9px 3px 
 	text-decoration: underline
 	span
