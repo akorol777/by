@@ -10,7 +10,7 @@ a
 .header
 	+clr
 	border-bottom: 2px solid $gray
-	height: 106px 
+	height: 107px 
 .header__roll
 	display: block
 	+clr	
@@ -27,7 +27,8 @@ a
 	height: 49px
 	width: 186px
 	display: inline-block	
-	+hide-text		 
+	+hide-text
+	vertical-align: bottom		 
 /*-----article--------------------------------------*/	
 .article
 	letter-spacing: 0.07em 	
@@ -67,9 +68,9 @@ a
 		font-weight: bold	
 		display: inline-block
 		margin: 0 0 12px 3px 
-		span
+		.time
 			font-size: 17px
-		span + span
+		.number
 			font-size: 14px	
 	.block__main-cont
 		margin-left: 2px
@@ -86,11 +87,11 @@ a
 	margin-bottom: 29px
 	font-size: 15px
 	line-height: 19px
-	span
+	.time
 		font-weight: bold
 		font-size: 12px
-	span + span
-		color: $red 
+	.number
+		font-weight: bold
 		font-size: 11px
 .block__roll
 	+clr
@@ -121,17 +122,15 @@ a
 		margin-bottom: 11px
 		font-weight: bold
 		cursor: pointer
-		span
-			font-weight: normal
+		.time
 			font-size: 15px
-		span + span
-			color: $red 
+		.number
 			font-weight: bold
 			font-size: 11px
 	div
 		letter-spacing: 0.04em
 	.video + a
-		margin-top: 14px
+		margin-top: 14px	
 .block-last
 	border-bottom: none
 	padding-bottom: 32px 	
@@ -167,7 +166,7 @@ a
 		margin: 0px 0px 18px 0px
 .article__acide-news
 	padding-left: 3px
-	margin-bottom: 48px
+	margin-bottom: 60px
 	.video
 		width: 216px
 		height: 133px
@@ -177,7 +176,12 @@ a
 		overflow: hidden
 	.block__roll-news
 		letter-spacing: 0 
-		margin: 0px 0px 19px 0px 
+		margin: 0px 0px 33px 0px 
+		padding: 0
+		a
+			font-size: 15px
+			line-height: 18px 
+			margin-bottom: 2px	
 .block__roll-info
 	margin-bottom: 56px
 	.info
@@ -251,15 +255,13 @@ a
 	padding: 28px 0px 0px 3px
 .footer__bottom-copyright
 	float: right
-	font-size: 11px
-	font-size: 11px
+	font-size: 12px
 	a
 		color: $red
 		&:hover
 			text-decoration: none
-			color: #000 		
-/*------time--------------------------------*/
-.time
+/*------data--------------------------------*/
+.data
 	display: inline-block
 	color: #b6b6b6 
 	font-size: 10px
@@ -278,7 +280,6 @@ a
 		color: #000 
 		&:hover
 			color: #000
-			cursor: default		
 .links-lang
 	float: right	
 	font-size: 11px
@@ -353,7 +354,7 @@ a
 		border: 2px solid $red 
 	.last
 		margin-right: 0	
-.links-prew	
+.links__prew	
 	margin: 7px 0 28px 
 	font-weight: bold
 	font-size: 12px
@@ -361,7 +362,7 @@ a
 	border: 2px #000 solid	
 	padding: 4px 9px 3px 
 	text-decoration: underline
-	span
+	.links__prew-sign
 		font-size: 24px
 		display: inline-block
 		overflow: hidden
@@ -386,3 +387,8 @@ a
 	+s(ico-6)
 .ico-counter
 	+s(ico-counter)		
+
+.time, .number
+	display: inline-block	
+.number
+	color: $red	
